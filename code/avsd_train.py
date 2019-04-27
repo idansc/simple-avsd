@@ -69,42 +69,6 @@ def initialize_model_weights(model, initialization, lstm_initialization):
 def fetch_batch(dh, data, index, result):
     result.append(dh.make_batch(data, index))
 
-def send_mail(args, msg_txt):
-    # Send mail
-    # -------------
-    # Import smtplib for the actual sending function
-    import smtplib
-
-    # Import the email modules we'll need
-    from email.mime.text import MIMEText
-    import socket
-
-    # Create a text/plain message
-    msg = MIMEText(msg_txt)
-
-    msg['Subject'] = "Exp: " + args.model_name + " " + socket.gethostname() + " " +args.model +"\n"
-
-    # me == the sender's email address
-    # family = the list of all recipients' email addresses
-    family = ["zeev0595@gmail.com", "alexander.g.schwing@gmail.com", "tamir.hazan@gmail.com"]
-    msg['From'] = 'idansc@tx.technion.ac.il'
-    msg['To'] = ', '.join(family)
-    msg.preamble = 'AudioDial'
-
-    # Open the files in binary mode.  Use imghdr to figure out the
-    # MIME subtype for each specific image.
-
-    # with open(os.path.join(mydir, "plot.png"), 'rb') as fp:
-    #    img_data = fp.read()
-    #    msg.add_attachment(img_data, maintype='image',
-    #                       subtype=imghdr.what(None, img_data))
-
-    # Send the email via our own SMTP server.
-    s = smtplib.SMTP('tx.technion.ac.il')
-    s.sendmail('idansc@tx.technion.ac.il', family, msg.as_string())
-    s.quit()
-
-
 # Evaluation routine
 def evaluate(model, data, indices):
     start_time = time.time()
@@ -401,13 +365,11 @@ if __name__ == "__main__":
             prefetch.join()
 
         logging.info("epoch: %d  train perplexity: %f" % (i + 1, math.exp(train_loss / train_num_words)))
-        email_msg = "epoch: %d  train perplexity: %f \n" % (i + 1, math.exp(train_loss / train_num_words))
         # validation step
         logging.info('-----------------------validation--------------------------')
         now = time.time()
         valid_ppl, valid_time = evaluate(model, valid_data, valid_indices)
         logging.info('validation perplexity: %.4f' % (valid_ppl))
-        email_msg +='validation perplexity: %.4f\n' % (valid_ppl)
 
         # update the model via comparing with the lowest perplexity
         modelfile = args.model + '_' + str(i + 1) + modelext
@@ -417,9 +379,7 @@ if __name__ == "__main__":
         if min_valid_ppl > valid_ppl:
             bestmodel_num = i + 1
             logging.info('validation perplexity reduced %.4f -> %.4f' % (min_valid_ppl, valid_ppl))
-            email_msg += 'validation perplexity reduced %.4f -> %.4f' % (min_valid_ppl, valid_ppl)
             min_valid_ppl = valid_ppl
-        send_mail(args=args, msg_txt=email_msg)
 
         cur_at += time.time() - now  # skip time of evaluation and file I/O
         logging.info('----------------')
