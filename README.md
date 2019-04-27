@@ -28,9 +28,10 @@ Download audio-video related features from this [link](https://technionmail-my.s
 
 The run script have 4 stages
 
-stage 1 - preparation of dependent packages
-stage 2 - training
-stage 3 - generation of sentences on test-set
-stage 4 - evaluation of generated sentences
-```$ ./run —stage X``` 
-to run desired stage.
+- stage 1 - preparation of dependent packages
+- stage 2 - training
+- stage 3 - generation of sentences on test-set
+- stage 4 - evaluation of generated sentences
+
+
+Use: ```$ ./run —stage X``` to run desired stage.
