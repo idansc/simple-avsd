@@ -26,7 +26,7 @@ Download [CHARADES](https://allenai.org/plato/charades/) audio-video related fea
 
 # Run
 
-The run script have 4 stages
+The script has 4 stages
 
 - stage 1 - preparation of dependent packages
 - stage 2 - training
