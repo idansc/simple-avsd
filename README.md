@@ -3,7 +3,7 @@
 This repository is the implementation of [A Simple Baseline for Audio-Visual Scene-Aware Dialog
 ](https://arxiv.org/abs/1904.05876v1). 
 
-<img src="overview_new-1.png">
+<img src="img/overview_new-1.png">
 
 The code is based on [Hori’s naive baseline](https://github.com/dialogtekgeek/AudioVisualSceneAwareDialog). We thank AVSD team for dataset and sharing implementation code.
 
