@@ -81,15 +81,6 @@ class Atten(nn.Module):
                  sizes=[], size_flag=False, size_force=False, pairwise_flag=True, unary_flag=True, self_flag=True):
         super(Atten, self).__init__()
 
-        '''
-        1 - rgb
-        2 - flow
-        3 - question
-
-        util_e -> embedding of utility
-        util_s -> spatial dimension of utility
-
-        '''
         self.util_e = util_e
 
         self.prior_flag = prior_flag
@@ -257,33 +248,6 @@ class Atten(nn.Module):
                 attention.append(torch.bmm(utils[i].transpose(1, 2), util_poten[i]).squeeze(2))
 
             return attention
-
-
-            '''
-            ans_poten = self.reduce_potentials_ans(ans_poten).squeeze()
-            ques_poten = self.reduce_potentials_ques(ques_poten).squeeze()
-            cap_poten = self.reduce_potentials_cap(cap_poten).squeeze()
-            img_poten = self.reduce_potentials_img(img_poten).squeeze()
-            qhist_poten = self.reduce_potentials_qhist(qhist_poten).squeeze()
-            ahist_poten = self.reduce_potentials_ahist(ahist_poten).squeeze()
-
-            ans_probs = F.softmax(ans_poten, dim=1).unsqueeze(2)
-            ques_probs = F.softmax(ques_poten, dim=1).unsqueeze(2)
-            cap_probs = F.softmax(cap_poten, dim=1).unsqueeze(2)
-            img_probs = F.softmax(img_poten, dim=1).unsqueeze(2)
-            qhist_probs = F.softmax(qhist_poten, dim=1).unsqueeze(2)
-            ahist_probs = F.softmax(ahist_poten, dim=1).unsqueeze(2)
-
-            a_ans = torch.bmm(ans.transpose(1, 2), ans_probs).squeeze()
-            a_ques = torch.bmm(ques.transpose(1, 2), ques_probs).squeeze()
-            a_cap = torch.bmm(cap.transpose(1, 2), cap_probs).squeeze()
-            a_img = torch.bmm(img.transpose(1, 2), img_probs).squeeze()
-            a_qhist = torch.bmm(qhist.transpose(1, 2), qhist_probs).squeeze()
-            a_ahist = torch.bmm(ahist.transpose(1, 2), ahist_probs).squeeze()
-
-            return a_ans, a_ques, a_cap, a_img, a_qhist, a_ahist
-            '''
-
 
 
 
