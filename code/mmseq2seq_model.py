@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """Multimodal sequence-to-sequence model module
-   Copyright 2018 Mitsubishi Electric Research Labs
+   Adapted from 2018 Mitsubishi Electric Research Labs
+   Used in: A Simple Baseline for Audio-Visual Scene-Aware Dialog
+   https://arxiv.org/abs/1904.05876v1
 """
 
 import sys

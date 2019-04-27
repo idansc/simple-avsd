@@ -1,8 +1,17 @@
 #!/usr/bin/env python
+
+"""
+   Factor Graph Attention
+
+   See: https://arxiv.org/abs/1904.05880
+
+   Code by: Idan Schwartz (idanschwartz@gmail.com)
+
+"""
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.autograd import Variable
 from itertools import  product,permutations, combinations_with_replacement, chain
 
 
