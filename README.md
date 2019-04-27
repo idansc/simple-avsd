@@ -3,7 +3,7 @@
 This repository is the implementation of [A Simple Baseline for Audio-Visual Scene-Aware Dialog
 ](https://arxiv.org/abs/1904.05876v1). 
 
-<img src="overview_new-1.png">
+<img src="img/overview_new-1.png">
 
 The code is based on [Hori’s naive baseline](https://github.com/dialogtekgeek/AudioVisualSceneAwareDialog). We thank AVSD team for dataset and sharing implementation code.
 
@@ -28,9 +28,10 @@ Download audio-video related features from this [link](https://technionmail-my.s
 
 The run script have 4 stages
 
-stage 1 - preparation of dependent packages
-stage 2 - training
-stage 3 - generation of sentences on test-set
-stage 4 - evaluation of generated sentences
-```$ ./run —stage X``` 
-to run desired stage.
+- stage 1 - preparation of dependent packages
+- stage 2 - training
+- stage 3 - generation of sentences on test-set
+- stage 4 - evaluation of generated sentences
+
+
+Use: ```$ ./run —stage X``` to run desired stage.
