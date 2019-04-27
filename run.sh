@@ -13,7 +13,7 @@ model_name=spatial_4
 
 # train|val|test sets including dialog text for each video
 train_set=data/train_set4DSTC7-AVSD.json
-valid_set=data/valid_set4DSTC7-AVSD.json
+valid_set=data/val_set.json
 #test_set=data/test_set4DSTC7-AVSD.json
 test_set=data/test_set.json
 
