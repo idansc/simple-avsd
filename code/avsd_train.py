@@ -20,12 +20,10 @@ import six
 import threading
 
 import torch
-import torch.nn as nn
 
 import data_handler as dh
 
 from mmseq2seq_model import MMSeq2SeqModel
-from multimodal_encoder import MMEncoder
 from lstm_encoder import LSTMEncoder
 from hlstm_encoder import HLSTMEncoder
 from hlstm_decoder import HLSTMDecoder
