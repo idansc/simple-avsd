@@ -65,18 +65,19 @@ enc_psize_=`echo $enc_psize|sed "s/ /-/g"`
 enc_hsize_=`echo $enc_hsize|sed "s/ /-/g"`
 fea_type_=`echo $fea_type|sed "s/ /-/g"`
         expdir=exp/${model_name}_${fea_type_}_${optimizer}_ep${enc_psize_}_eh${enc_hsize_}_dp${dec_psize}_dh${dec_hsize}_att${att_size}_bs${batch_size}_seed${seed}
-if [ `pwd | grep exp | wc -l` -eq 0 ]; then
 
-	mkdir -p $expdir
-	mkdir -p $expdir/code
-	mkdir -p $expdir/exp
-	cp *.sh $expdir/
-	cp code/*.py ${expdir}/code
-	echo $(pwd)/data
-	ln -s $(pwd)/utils ${expdir}/utils
-	ln -s $(pwd)/data ${expdir}/data
-	cd $expdir
-fi
+#if [ `pwd | grep exp | wc -l` -eq 0 ]; then
+
+#	mkdir -p $expdir
+#	mkdir -p $expdir/code
+#	mkdir -p $expdir/exp
+#	cp *.sh $expdir/
+#	cp code/*.py ${expdir}/code
+#	echo $(pwd)/data
+#	ln -s $(pwd)/utils ${expdir}/utils
+#	ln -s $(pwd)/data ${expdir}/data
+#	cd $expdir
+#fi
 
 # command settings
 if [ $use_slurm = true ]; then
