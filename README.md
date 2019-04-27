@@ -35,3 +35,5 @@ The script has 4 stages
 
 
 Use: ```$ ./run —stage X``` to run desired stage.
+
+You can follow this [link](https://technionmail-my.sharepoint.com/:f:/g/personal/idansc_campus_technion_ac_il/EoJY-0H1KWJImhXoAI_pUf0BnhIE3d-aqRppM6jxnMOuYQ?e=CAngKx) for pretrained model.
