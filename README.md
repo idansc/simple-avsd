@@ -22,7 +22,7 @@ We use AVSD v0.1 official train-set. For validation and evaluation we use the pr
 Download AVSD annotations from this [link](https://technionmail-my.sharepoint.com/:u:/r/personal/idansc_campus_technion_ac_il/Documents/Deep/AudioVisualSceneAwareDialog/data/data_dl/annotations.tar?csf=1&e=kfZfl5), and extract to ‘data/’
 
 
-Download audio-video related features from this [link](https://technionmail-my.sharepoint.com/:u:/g/personal/idansc_campus_technion_ac_il/EQqfg7BwrxdPrAoKG9REl8UBsFr0kH8ccEtVhTdw499bNQ?e=9mpi1j), and extract to ‘data/charades_features’
+Download [CHARADES](https://allenai.org/plato/charades/) audio-video related features from this [link](https://technionmail-my.sharepoint.com/:u:/g/personal/idansc_campus_technion_ac_il/EQqfg7BwrxdPrAoKG9REl8UBsFr0kH8ccEtVhTdw499bNQ?e=9mpi1j), and extract to ‘data/charades_features’
 
 # Run
 
