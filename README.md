@@ -19,7 +19,7 @@ The code is based on [Hori’s naive baseline](https://github.com/dialogtekgeek/
 
 We use AVSD v0.1 official train-set. For validation and evaluation we use the prototype val-set and test-set. See [DSTC7 AVSD challenge](https://github.com/hudaAlamri/DSTC7-Audio-Visual-Scene-Aware-Dialog-AVSD-Challenge)  for more details. Please cite AVSD if you use their dataset.
 
-Download AVSD annotations from this [link](https://technionmail-my.sharepoint.com/:u:/r/personal/idansc_campus_technion_ac_il/Documents/Deep/AudioVisualSceneAwareDialog/data/data_dl/annotations.tar?csf=1&e=kfZfl5), and extract to ‘data/’
+Download AVSD annotations from this [link](https://technionmail-my.sharepoint.com/:u:/g/personal/idansc_campus_technion_ac_il/EfimojAkeAdFoHE46KS8H7ABwhvkKGtRYQOK-s5Pxa2UJg), and extract to ‘data/’
 
 
 Download [CHARADES](https://allenai.org/plato/charades/) audio-video related features from this [link](https://technionmail-my.sharepoint.com/:u:/g/personal/idansc_campus_technion_ac_il/EfvLzuCm6XpKmTzgpHTWlzIBsyd5qX7FbOwgkLp0_GzFag?e=8BF2LC), and extract to ‘data/charades_features’
