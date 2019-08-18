@@ -34,7 +34,7 @@ class Pairwise(nn.Module):
     def __init__(self, embed_x_size, x_spatial_dim=None, embed_y_size=None, y_spatial_dim=None):
         super(Pairwise, self).__init__()
         print(x_spatial_dim, y_spatial_dim)
-        embed_y_size = embed_y_size if y_spatial_dim is not None else embed_x_size
+        embed_y_size = embed_y_size if embed_y_size is not None else embed_x_size
         self.y_spatial_dim = y_spatial_dim if y_spatial_dim is not None else x_spatial_dim
 
         self.embed_size = max(embed_x_size, embed_y_size)
