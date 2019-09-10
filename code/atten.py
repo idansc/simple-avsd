@@ -20,13 +20,14 @@ class Unary(nn.Module):
         super(Unary, self).__init__()
         self.embed = nn.Conv1d(embed_size, embed_size, 1)
         self.feature_reduce = nn.Conv1d(embed_size, 1, 1)
+        self.dropout = nn.Dropout()
 
     def forward(self,  X):
         X = X.transpose(1, 2)
 
         X_embed = self.embed(X)
 
-        X_nl_embed = F.dropout(F.relu(X_embed))
+        X_nl_embed = self.dropout(F.relu(X_embed))
         X_poten = self.feature_reduce(X_nl_embed)
         return X_poten.squeeze(1)
 
