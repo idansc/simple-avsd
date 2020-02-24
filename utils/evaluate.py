@@ -20,7 +20,7 @@ def send_mail(model_name, model, msg_txt):
 
     # me == the sender's email address
     # family = the list of all recipients' email addresses
-    family = ["zeev0595@gmail.com", "alexander.g.schwing@gmail.com", "tamir.hazan@gmail.com"]
+    family = ["test@gmail.com"]
     msg['From'] = 'idansc@tx.technion.ac.il'
     msg['To'] = ', '.join(family)
     msg.preamble = 'AudioDial'
